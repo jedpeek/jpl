@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { draftMode } from "next/headers";
 
 import MoreStories from "../../more-stories";
@@ -22,7 +22,7 @@ export default async function PostPage({
 }: {
   params: { slug: string };
 }) {
-  const { isEnabled } = draftMode();
+  const { isEnabled }: any = draftMode();
   const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
 
   return (
