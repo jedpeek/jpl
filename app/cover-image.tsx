@@ -20,7 +20,7 @@ export default function CoverImage({
       priority
       width={2000}
       height={1000}
-      className={cn("shadow-small", {
+      className={cn("shadow-small rounded", {
         "hover:shadow-medium transition-shadow duration-200": slug,
       })}
       src={url}
@@ -28,7 +28,7 @@ export default function CoverImage({
   );
 
   return (
-    <div className="sm:mx-0">
+    <div className="sm:mx-0 ">
       {slug ? (
         <Link href={`/posts/${slug}`} aria-label={title}>
           {image}
