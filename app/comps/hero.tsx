@@ -4,7 +4,7 @@ import Image from "next/image";
 function Hero() {
   return (
     <section className="text-white body-font font-bold text-shadow-lg p-4">
-      <div className=" bg-[url('public/images/jpl_house.jpg')] bg-cover rounded p-2 ">
+      <div className=" bg-[url('public/images/jpl_house.jpg')] bg-cover rounded p-2">
         <h2 className="drop-shadow-2xl  text-white mt-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           JedPeekLending.
         </h2>
