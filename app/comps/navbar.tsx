@@ -6,18 +6,18 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react"; // make sure you install lucide-react
 
 const navItems = [
-  { name: "Blog", href: "/posts", target: "" },
+  { name: "BLOG", href: "/posts", target: "" },
   { name: "FAQ", href: "/faq", target: "" },
   // { name: "About", href: "/about", target: "" },
   // { name: "Contact", href: "/contact", target: "" },
   {
-    name: "Veterans",
+    name: "VETERANS",
     href: "/veterans",
     target: "",
   },
-  { name: "Calculator", href: "/calculator", target: "" },
+  { name: "CALCULATOR", href: "/calculator", target: "" },
   {
-    name: "Apply",
+    name: "APPLY",
     href: "https://1416824.my1003app.com/779577/register",
     target: "_blank",
   },

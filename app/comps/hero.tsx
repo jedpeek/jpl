@@ -23,12 +23,12 @@ function Hero() {
                 href="https://1416824.my1003app.com/779577/register"
                 target="_blank"
               >
-                <button className="inline-flex text-lg border text-white border-slate-300 rounded-2xl p-4 px-8 shadow-sm  text-center hover:bg-blue-900 hover:scale-105 duration-150">
+                <button className="inline-flex text-lg border text-white border-slate-300 rounded-2xl p-4 px-8 shadow-sm  text-center hover:bg-white hover:text-slate-900 hover:scale-105 duration-150">
                   Apply
                 </button>
               </a>
               <a href="https://www.calendly.com/jedpeek" target="_blank">
-                <button className="p-4 ml-4 text-lg text-white border  rounded-2xl p-4 shadow-sm  text-center hover:bg-slate-900 hover:scale-105 duration-150">
+                <button className="p-4 ml-4 text-lg text-white border  rounded-2xl p-4 shadow-sm  text-center hover:bg-slate-900 hover:scale-105 duration-150 hover:border-none">
                   Schedule Consultation
                 </button>
               </a>

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.imagecontainer {
+  background: url("public/images/JPL_VA_Grass.jpg");
+
+  background-size: cover;
+}

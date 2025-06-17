@@ -1,163 +1,100 @@
 "use client";
-import { motion } from "framer-motion";
 
-export default function VAHomeLoanInfo() {
+import ContentfulImage from "@/lib/contentful-image";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function VALoanPage() {
   return (
-    <motion.div
-      className="max-w-4xl mx-auto p-6 space-y-8"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <section className="text-center">
-        <h1 className="text-4xl font-bold text-slate-800 mb-4">
-          🇺🇸 VA Home Loans: Honoring Service with the Power of Homeownership
-        </h1>
-        <p className="text-lg text-slate-600">
-          You served our country—now let us serve you. VA Home Loans make
-          homeownership accessible and affordable for veterans, active-duty
-          members, and eligible spouses.
-        </p>
+    <main className="bg-white text-slate-800 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-slate-900 text-white py-20 px-6 md:px-20 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            VA Home Loans Made Simple
+          </h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto">
+            Learn how VA loans empower veterans and active-duty service members
+            to become homeowners—with zero down payment and no PMI.
+          </p>
+        </motion.div>
       </section>
 
-      <motion.section
-        className="bg-blue-50 p-6 rounded-2xl shadow"
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-semibold text-slate-800 mb-4">
-          ✅ Key Benefits of a VA Home Loan
-        </h2>
-        <ul className="list-disc list-inside text-slate-700 space-y-2">
-          <li>
-            <strong>$0 Down Payment:</strong> Buy a home with no money down.
-          </li>
-          <li>
-            <strong>No PMI:</strong> Save monthly with no private mortgage
-            insurance required.
-          </li>
-          <li>
-            <strong>Competitive Rates:</strong> Lower interest rates than many
-            loan types.
-          </li>
-          <li>
-            <strong>Flexible Credit Guidelines:</strong> Easier to qualify.
-          </li>
-          <li>
-            <strong>Limited Closing Costs:</strong> VA limits what you can be
-            charged.
-          </li>
-        </ul>
-      </motion.section>
+      {/* Benefits Section */}
+      <section className="py-16 px-6 md:px-20 grid md:grid-cols-2 gap-10 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* <ContentfulImage
+            src="https://source.unsplash.com/featured/?veteran,home"
+            alt="Veteran and family in front of home"
+            width={600}
+            height={400}
+            className="rounded-2xl shadow-lg"
+          /> */}
+          <div className="object-cover bg-[url('public/images/JPL_VA_Flag.jpg')] w-100 h-80 rounded-xl shadow-md mx-auto w-400 h-80"></div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-semibold mb-4">Why Choose a VA Loan?</h2>
+          <ul className="space-y-4 text-lg">
+            <li>✅ 0% Down Payment Required</li>
+            <li>✅ No Private Mortgage Insurance (PMI)</li>
+            <li>✅ Competitive Interest Rates</li>
+            <li>✅ Flexible Credit Requirements</li>
+            <li>✅ Reusable VA Loan Benefit</li>
+          </ul>
+        </motion.div>
+      </section>
 
-      <motion.section
-        className="bg-white border border-slate-200 p-6 rounded-2xl shadow"
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-semibold text-slate-800 mb-4">
-          🎖️ Who's Eligible?
-        </h2>
-        <ul className="list-disc list-inside text-slate-700 space-y-2">
-          <li>Active-duty service members</li>
-          <li>Veterans who meet service requirements</li>
-          <li>National Guard or Reserve with sufficient service</li>
-          <li>Eligible surviving spouses</li>
-        </ul>
-      </motion.section>
+      {/* Additional Info Section */}
+      <section className="bg-slate-100 py-16 px-6 md:px-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+            Designed for Service Members & Veterans
+          </h3>
+          <p className="text-lg mb-8">
+            VA home loans are backed by the Department of Veterans Affairs,
+            offering trusted support to those who’ve served our country. Whether
+            it’s your first home or your next, this benefit helps make ownership
+            more attainable.
+          </p>
+          <div className="imagecontainer rounded-xl mx-auto h-80"></div>
+        </motion.div>
+      </section>
 
-      <motion.section
-        className="bg-slate-100 p-6 rounded-2xl shadow"
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-semibold text-slate-800 mb-4">
-          📚 VA Home Loan FAQs
-        </h2>
-        <div className="space-y-4 text-slate-700">
-          <div>
-            <p>
-              <strong>Q:</strong> Do I have to be a first-time homebuyer?
-            </p>
-            <p>
-              <strong>A:</strong> No, you can use the VA benefit more than once.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>Q:</strong> Can I use a VA loan for a second home?
-            </p>
-            <p>
-              <strong>A:</strong> Only for a primary residence, not an
-              investment property.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>Q:</strong> Is there a credit score requirement?
-            </p>
-            <p>
-              <strong>A:</strong> Lenders generally require a score of 580–620
-              or higher.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>Q:</strong> What is the VA funding fee?
-            </p>
-            <p>
-              <strong>A:</strong> A one-time fee that can be waived or rolled
-              into the loan.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>Q:</strong> Can I buy a condo with a VA loan?
-            </p>
-            <p>
-              <strong>A:</strong> Yes, if the condo is VA-approved.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className="text-center bg-white p-6 border border-slate-200 rounded-2xl shadow"
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-semibold text-slate-800 mb-2">
-          👣 Ready to Take the First Step?
-        </h2>
-        <p className="text-slate-600 mb-4">
-          Let’s explore your eligibility and get you closer to homeownership.
-        </p>
-        <div className="space-y-2">
-          <p>🗓️ Schedule a free VA loan consultation today</p>
-          <div className="m-8 border border-slate-300 rounded-2xl p-4 shadow-sm bg-slate-600 text-center hover:bg-slate-900 hover:scale-105 duration-150">
-            <a
-              href="https://www.calendly.com/jedpeek"
-              target="_blank"
-              className="text-center text-xl text-white"
-            >
-              SCHEDULE CONSULATATION
-            </a>
-          </div>
-          <div className="m-8 border border-slate-300 rounded-2xl p-4 shadow-sm bg-blue-600 text-center hover:bg-blue-900 hover:scale-105 duration-150">
-            <a
-              href="https://1416824.my1003app.com/779577/register"
-              target="_blank"
-              className="text-center text-xl text-white"
-            >
-              APPLY NOW
-            </a>
-          </div>
-        </div>
-      </motion.section>
-    </motion.div>
+      {/* Call to Action */}
+      <section className="py-20 px-6 md:px-20 bg-slate-900 text-white text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h4 className="text-2xl md:text-3xl font-semibold mb-6">
+            Ready to Get Started?
+          </h4>
+          <Link href="https://1416824.my1003app.com/779577/register">
+            <div className="inline-block bg-white text-slate-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-slate-200 transition">
+              Apply Today
+            </div>
+          </Link>
+        </motion.div>
+      </section>
+    </main>
   );
 }
